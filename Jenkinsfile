@@ -20,8 +20,13 @@ pipeline {
                 {
                 bat 'dotnet restore'
             }
-        }
-           
+        }         
     }
+
+        stage('Build') {
+            steps {
+                bat 'dotnet build --configuration Release --no-restore'
+            }
+        }
 }
 }
