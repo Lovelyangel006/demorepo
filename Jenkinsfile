@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_SDK_VERSION = '6.0' // Specify the .NET SDK version you are using
+        DOTNET_SDK_VERSION = '8.0' // Specify the .NET SDK version you are using
     }
 
     stages {
