@@ -22,11 +22,6 @@ pipeline {
             }
         }         
     }
-
-        stage('Build') {
-            steps {
-                bat 'dotnet build --configuration Release --no-restore'
-            }
         }
 }
-}
+
