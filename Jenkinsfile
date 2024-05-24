@@ -8,15 +8,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                   git branch: 'dev', url: 'https://githyd.epam.com/epm-pe2n/team-1.git'
+                   git branch: 'dev', url: 'https://github.com/Lovelyangel006/demorepo.git'
             }
         }
 
         stage('Restore') {
             steps {
-                dir('development/Authentication/Authentication.API') {
+               
                     sh 'dotnet restore'
-                }
             }
         }
 
