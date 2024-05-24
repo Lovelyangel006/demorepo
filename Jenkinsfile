@@ -15,7 +15,7 @@ pipeline {
         stage('Restore') {
             steps {
                 bat 'dotnet --info'
-                bat 'dotnet restore'
+                //bat 'dotnet restore'
             }
         }
 
