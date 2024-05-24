@@ -14,18 +14,15 @@ pipeline {
 
         stage('Restore') {
             steps {
-                   sh 'dotnet --info'
-                    sh 'dotnet restore'
+                bat 'dotnet --info'
+                bat 'dotnet restore'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'dotnet build --configuration Release --no-restore'
+                bat 'dotnet build --configuration Release --no-restore'
             }
         }
-
-        
     }
 }
-
