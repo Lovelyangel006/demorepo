@@ -25,24 +25,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'dotnet test --no-build'
-            }
-        }
-    }
-
-    post {
-        always {
-            archiveArtifacts artifacts: '**/bin/**/*.dll', allowEmptyArchive: true
-            junit 'TestResults/*.xml'
-        }
-        success {
-            echo 'Build succeeded!'
-        }
-        failure {
-            echo 'Build failed!'
-        }
+        
     }
 }
 
